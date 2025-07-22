@@ -10,8 +10,8 @@ ENV CLIENT_S3_FILE  set-CLIENT_S3_FILE-to_your_s3_config_filename
 # Install Mountebank via Node
 RUN yum upgrade -y
 # RUN yum install -y gcc-c++ make
-RUN yum install https://rpm.nodesource.com/pub_18.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
-RUN yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+RUN curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
+RUN yum install nodejs -y
 RUN curl -sL -o /bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 RUN chmod +x /bin/gimme
 RUN yum install -y \
