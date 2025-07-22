@@ -1,10 +1,9 @@
 {
-    "executionName":  "2_32_1_one-flow-tests_run-02",
+    "executionName":  "yemike-test",
     "executeCollections": [
-        "ecs-firelens-one-flow-tests"
+        "ecs-firelens-stability-tests"
     ],
     "definitions": {
-        "imageAwsForFluentBit": "public.ecr.aws/aws-observability/aws-for-fluent-bit:init-2.32.1",
-        "enableMonitoring": true
+        "imageAwsForFluentBit": "113424923516.dkr.ecr.us-west-2.amazonaws.com/aws-for-fluent-bit:2.33.0-init-debug"   
     }
 }
