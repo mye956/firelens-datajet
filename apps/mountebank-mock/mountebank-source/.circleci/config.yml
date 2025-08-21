@@ -56,7 +56,7 @@ jobs:
           command: |
             npm run lint
             scripts/codeclimate
-            cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js
+            cat ./coverage/lcov.info | npx coveralls-next
             scripts/sonar
             npm run jsdoc && node tasks/deploy/docs.js
       - run:
